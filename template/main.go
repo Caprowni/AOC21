@@ -12,8 +12,7 @@ func main() {
 	var lines []int
 	for scanner.Scan() {
 		dep := strings.TrimSpace(scanner.Text())
-		n, _ := strconv.Atoi(dep)
-		lines = append(lines, n)
+		lines := strconv.Atoi(dep)
 	}
 
 	one := one()
