@@ -30,9 +30,9 @@ func main() {
 	for i := 2; i < len(lines); i += 6 {
 		board := make([]int, 25)
 		for j := 0; j < 5; j++ {
-			for c, v := range strings.Fields(lines[i+j]) {
+			for idx, v := range strings.Fields(lines[i+j]) {
 				n, _ := strconv.Atoi(v)
-				board[5*j+c] = n
+				board[5*j+idx] = n
 			}
 		}
 		boards = append(boards, board)
